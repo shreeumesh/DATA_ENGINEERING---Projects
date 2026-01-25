@@ -1,0 +1,16 @@
+encounter_id,patient_id,visit_date,visit_type,facility
+1001,1,2025-01-01,OPD,Bangalore
+1002,2,2025-01-01,OPD,Bangalore
+1003,1,2025-01-02,IPD,Chennai
+1004,3,2025-01-02,OPD,Chennai
+1005,,2025-01-03,OPD,Bangalore
+1006,1,2025-01-03,OPD,Bangalore
+1007,4,2025-01-03,OPD,Bangalore
+1008,5,2025-01-04,IPD,Hyderabad
+1009,6,2025-01-04,OPD,Hyderabad
+1010,7,2025-01-04,OPD,Chennai
+1011,8,2025-01-05,OPD,Bangalore
+1012,9,2025-01-05,OPD,Bangalore
+1013,10,2025-01-05,IPD,Chennai
+1014,11,2025-01-06,OPD,Hyderabad
+1015,12,2025-01-06,OPD,Bangalore

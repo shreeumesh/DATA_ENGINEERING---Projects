@@ -1,0 +1,13 @@
+patient_id,first_name,last_name,gender,dob
+1,Ravi,Kumar,M,1990-05-10
+2,Sita,Sharma,F,1985-08-22
+3,Arun,Patel,M,1978-01-15
+4,Meena,Rao,F,
+5,Anil,Verma,M,1992-11-30
+6,Kavya,Iyer,F,1995-02-14
+7,Suresh,Naidu,M,1980-06-18
+8,Divya,Menon,F,1988-09-05
+9,Rahul,Gupta,M,1991-12-01
+10,Priya,Malhotra,F,1986-03-25
+11,Vikram,Singh,M,1975-07-09
+12,Neha,Aggarwal,F,1993-10-12
