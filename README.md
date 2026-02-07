@@ -1,175 +1,47 @@
-🏥 Healthcare Patient Visit ETL Pipeline
+# 💡 Healthcare Data ETL Pipeline
 
-Python + SQL | Data Engineering Project
+## 📖 Project Overview
 
-📌 Problem Statement
+This project is a **modular ETL pipeline** built in Python that simulates a real-world data engineering workflow:
 
-Healthcare systems generate patient and visit (encounter) data daily from multiple sources.
-This raw data is often incomplete, duplicated, and not ready for analytics.
+🔹 Extracting raw healthcare/structured data  
+🔹 Cleaning and transforming datasets  
+🔹 Loading into a structured database  
 
-The goal of this project is to build a simple but realistic ETL pipeline that:
+This pipeline demonstrates the core principles of production-grade ETL architecture.
 
-Cleans healthcare data
+---
 
-Joins patient and encounter information
+## ⚙️ Tech Stack
 
-Loads analytics-ready data into a SQL database
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=postgresql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-Enables common healthcare reporting queries
+---
 
-📂 Data Used
+## 🚀 Architecture
 
-This project uses synthetic healthcare data (no real patient data).
+Raw Data → Extract → Transform → Validate → Load → Database
 
-1️⃣ Patient Data (patient.csv)
+---
 
-Contains patient demographic information:
+## 🔄 Pipeline Workflow
 
-patient_id
+1. **Extract**
+   - Loads raw CSV files from `data/`
+2. **Transform**
+   - Cleans missing values
+   - Standardizes columns
+   - Applies business rules
+3. **Validate**
+   - Checks schema & integrity rules
+4. **Load**
+   - Inserts processed data into PostgreSQL
+   - Ensures integrity via optimized SQL
 
-first_name
+---
 
-last_name
+## 📂 Project Structure
 
-gender
-
-dob
-
-Data quality issues simulated:
-
-Missing date of birth (DOB)
-
-2️⃣ Encounter Data (encounter.csv)
-
-Contains patient visit details:
-
-encounter_id
-
-patient_id
-
-visit_date
-
-visit_type (OPD / IPD)
-
-facility
-
-Data quality issues simulated:
-
-Missing patient_id
-
-Multiple encounters per patient
-
-Multiple facilities
-
-🔁 ETL Workflow
-🟢 Extract
-
-Raw CSV files are read using pandas
-
-Source data represents daily healthcare exports
-
-🟡 Transform
-
-The following transformations are applied:
-
-Remove encounters with missing patient_id (business-critical key)
-
-Convert date fields to proper datetime format
-
-Join patient and encounter data using patient_id
-
-Add a row-level metric visit_count = 1 to support analytics
-
-Each row in the transformed dataset represents one patient visit.
-
-🔵 Load
-
-Transformed data is loaded into a SQLite database
-
-Final table name: patient_visits
-
-Database file: healthcare.db
-
-🛠️ Technologies Used
-
-Python 3
-
-pandas – data extraction and transformation
-
-SQLite – lightweight relational database
-
-SQL – analytics and validation queries
-
-VS Code – development and database viewing
-
-🗂️ Project Structure
-Patient_visit_ELT/
-│
-├── Data/
-│   ├── patient.csv
-│   ├── encounter.csv
-│   └── patient_visit_cleaned.csv
-│
-├── Python/
-│   ├── Extract.py
-│   ├── Transform.py
-│   └── Load.py
-│
-├── Sql/
-│   └── analytics.sql
-│
-└── healthcare.db
-
-📊 Sample SQL Queries
-
-The following queries can be run on the patient_visits table:
-
-🔹 View all patient visits
-SELECT * FROM patient_visits;
-
-🔹 Total visits per patient
-SELECT patient_id, SUM(visit_count) AS total_visits
-FROM patient_visits
-GROUP BY patient_id
-ORDER BY total_visits DESC;
-
-🔹 Visits by facility
-SELECT facility, COUNT(*) AS visits
-FROM patient_visits
-GROUP BY facility;
-
-🔹 Visits per day
-SELECT visit_date, COUNT(*) AS visits
-FROM patient_visits
-GROUP BY visit_date
-ORDER BY visit_date;
-
-🧠 Key Learnings
-
-End-to-end ETL pipeline design
-
-Healthcare data modeling (one patient → many encounters)
-
-Data quality handling using business rules
-
-SQL-based analytics on curated data
-
-Clear separation of ETL logic (Python) and analytics logic (SQL)
-
-🚀 Future Enhancements
-
-Incremental data loading
-
-Data quality validation framework
-
-Fact and dimension table modeling
-
-Migration to PostgreSQL
-
-Dashboard integration
-
-👤 Author
-
-Umesh
-Aspiring Data Engineer
-Focused on Python, SQL, and Healthcare Analytics
