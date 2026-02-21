@@ -1,0 +1,3 @@
+# sql-regex-demos
+# No external dependencies required!
+# sqlite3 is built into Python 3.6+
