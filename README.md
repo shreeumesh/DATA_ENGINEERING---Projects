@@ -1,47 +1,79 @@
-# 💡 Healthcare Data ETL Pipeline
+🏥 Data Engineering Portfolio
+Healthcare IT → Data Engineering | Bengaluru
 
-## 📖 Project Overview
+📁 Projects Overview
+Healthcare ETL Pipeline: CSV → PostgreSQL ETL with validation
 
-This project is a **modular ETL pipeline** built in Python that simulates a real-world data engineering workflow:
+SQL Regex Demos: Healthcare data pattern matching
 
-🔹 Extracting raw healthcare/structured data  
-🔹 Cleaning and transforming datasets  
-🔹 Loading into a structured database  
+PySpark Healthcare: Large-scale patient data processing
 
-This pipeline demonstrates the core principles of production-grade ETL architecture.
+Python Data Cleaning: Healthcare data quality pipelines
 
----
+🏗️ Architecture Pattern
+Raw Data (CSV/JSON) → Extract
 
-## ⚙️ Tech Stack
+Clean & Validate → Transform
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=postgresql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+Load to Database → Verify
 
----
+Production Reports & Dashboards
 
-## 🚀 Architecture
+🚀 Quick Start
+git clone https://github.com/shreeumesh/data-engineering.git
 
-Raw Data → Extract → Transform → Validate → Load → Database
+cd data-engineering
 
----
+Healthcare ETL: cd healthcare-etl-pipeline && python main.py
 
-## 🔄 Pipeline Workflow
+SQL Regex Demo: cd sql-regex-demos && python test_regex.py
 
-1. **Extract**
-   - Loads raw CSV files from `data/`
-2. **Transform**
-   - Cleans missing values
-   - Standardizes columns
-   - Applies business rules
-3. **Validate**
-   - Checks schema & integrity rules
-4. **Load**
-   - Inserts processed data into PostgreSQL
-   - Ensures integrity via optimized SQL
+🛠️ Tech Stack
+🔹 Python 3.11+
 
----
+🔹 Pandas
 
-## 📂 Project Structure
+🔹 SQL (PostgreSQL)
 
+🔹 SQLite
+
+🔹 PySpark
+
+🔹 REGEXP
+
+🔹 Git/GitHub
+
+🔹 VS Code
+
+🎯 Skills Demonstrated
+ETL Development: Extract → Transform → Load pipelines
+
+Data Quality: Regex cleaning, validation rules
+
+SQL Optimization: Pattern matching, window functions
+
+Python Automation: Data processing scripts
+
+Version Control: Git branching, GitHub portfolio
+
+💼 About Me
+Healthcare IT Professional (Bengaluru) → Data Engineering
+
+3+ years healthcare data analytics & reporting
+
+Building production-ready ETL pipelines
+
+SQL expert: REGEXP, CTEs, optimization
+
+Active on LinkedIn sharing #DataEngineering tips
+
+📊 For Recruiters
+✅ Healthcare domain + Modern DE tools
+
+✅ End-to-end pipeline ownership
+
+✅ Real-world healthcare scenarios
+
+✅ Ready for Data Engineering roles
+
+⭐ Star if helpful! #DataEngineering #ETL #HealthcareAnalytics #Python #SQL
