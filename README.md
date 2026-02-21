@@ -19,12 +19,6 @@ Load to Database → Verify
 
 Production Reports & Dashboards
 
-🚀 Quick Start
-git clone https://github.com/shreeumesh/data-engineering.git
-
-cd data-engineering
-
-Healthcare ETL: cd healthcare-etl-pipeline && python main.py
 
 SQL Regex Demo: cd sql-regex-demos && python test_regex.py
 
